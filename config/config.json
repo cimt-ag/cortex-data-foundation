@@ -1,14 +1,14 @@
 {
-    "testData": true,
+    "testData": false,
     "deploySAP": true,
     "deploySFDC": true,
     "deployMarketing": true,
     "deployDataMesh": true,
     "turboMode": true,
-    "projectIdSource": "",
-    "projectIdTarget": "",
-    "targetBucket": "",
-    "location": "US",
+    "projectIdSource": "sandbox-cortex-cip20",
+    "projectIdTarget": "sandbox-cortex-cip20",
+    "targetBucket": "sandbox-cortex-cip20-dag",
+    "location": "eu",
     "languages": [
         "E",
         "S"
@@ -19,8 +19,8 @@
     "testDataProject": "kittycorn-public",
     "k9": {
         "datasets": {
-            "processing": "K9_PROCESSING",
-            "reporting": "K9_REPORTING"
+            "processing": "CIP20_K9_PROCESSING",
+            "reporting": "CIP20_K9_REPORTING"
         }
     },
     "DataMesh": {
@@ -32,10 +32,10 @@
     "SAP": {
         "deployCDC": true,
         "datasets": {
-            "cdc": "",
-            "raw": "",
-            "ml": "ML_MODELS",
-            "reporting": "REPORTING"
+            "cdc": "CIP20_SAP_CDC",
+            "raw": "CIP20_SAP_RAW",
+            "ml": "CIP20_SAP_ML_MODELS",
+            "reporting": "CIP20_SAP_REPORTING"
         },
         "SQLFlavor": "ecc",
         "mandt": "100"
@@ -45,9 +45,9 @@
         "createMappingViews": true,
         "createPlaceholders": true,
         "datasets": {
-            "cdc": "",
-            "raw": "",
-            "reporting": "REPORTING_SFDC"
+            "cdc": "CIP20_CORTEX_SFDC_CDC",
+            "raw": "CIP20_CORTEX_SFDC_RAW",
+            "reporting": "CIP20_CORTEX_SFDC_REPORTING"
         }
     },
     "marketing": {
@@ -55,36 +55,36 @@
         "deployCM360": true,
         "deployTikTok": true,
         "deployLiveRamp": true,
-        "dataflowRegion": "",
+        "dataflowRegion": "eu-west3",
         "GoogleAds": {
             "deployCDC": true,
             "lookbackDays": 180,
             "datasets": {
-                "cdc": "",
-                "raw": "",
-                "reporting": "REPORTING_GoogleAds"
+                "cdc": "CIP20_CORTEX_GADS_CDC",
+                "raw": "CIP20_CORTEX_GADS_RAW",
+                "reporting": "CIP20_CORTEX_GADS_REPORTING"
             }
         },
         "CM360": {
             "deployCDC": true,
-            "dataTransferBucket": "",
+            "dataTransferBucket": "sandbox-cortex-cip20-transfer",
             "datasets": {
-                "cdc": "",
-                "raw": "",
-                "reporting": "REPORTING_CM360"
+                "cdc": "CIP20_CORTEX_CM360_CDC",
+                "raw": "CIP20_CORTEX_CM360_RAW",
+                "reporting": "CIP20_CORTEX_CM360_REPORTING"
             }
         },
         "TikTok": {
             "deployCDC": true,
             "datasets": {
-                "cdc": "",
-                "raw": "",
-                "reporting": "REPORTING_TikTok"
+                "cdc": "CIP20_CORTEX_TIKTOK_CDC",
+                "raw": "CIP20_CORTEX_TIKTOK_RAW",
+                "reporting": "CIP20_CORTEX_TIKTOK_REPORTING"
             }
         },
         "LiveRamp": {
             "datasets": {
-                "cdc": ""
+                "cdc": "CIP20_LIVERAMP_CDC"
             }
         }
     }
